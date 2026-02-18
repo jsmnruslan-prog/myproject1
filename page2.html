@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equive="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h2>Тест по теме «Фотосинтез»</h2><p>Ваше имя:</p>
+        <input type="text" name="name"><br><br>
+
+    <form id="quiz">
+
+<p>1. Что является источником энергии для фотосинтеза?</p>
+<input type="radio" name="q1" value="1"> Свет <br>
+<input type="radio" name="q1" value="0"> Тепло <br>
+<input type="radio" name="q1" value="0"> Электричество <br>
+
+<p>2. Какой пигмент участвует в фотосинтезе?</p>
+<input type="radio" name="q2" value="1"> Хлорофилл <br>
+<input type="radio" name="q2" value="0"> Гемоглобин <br>
+<input type="radio" name="q2" value="0"> Меланин 
+
+<p>3. Какой газ поглощается растениями в процессе фотосинтеза?</p>
+<input type="radio" name="q3" value="1"> CO₂ <br>
+<input type="radio" name="q3" value="0"> O₂ <br>
+<input type="radio" name="q3" value="0"> N₂ <br>
+
+<p>4. Где происходит световая фаза?</p>
+<input type="radio" name="q4" value="1"> В тилакоидах <br>
+<input type="radio" name="q4" value="0"> В ядре <br>
+<input type="radio" name="q4" value="0"> В цитоплазме <br>
+<br>
+
+<p>5. Где происходит тёмная фаза?</p>
+<input type="radio" name="q5" value="1"> В строме <br>
+<input type="radio" name="q5" value="0"> В митохондриях <br>
+<input type="radio" name="q5" value="0"> В лизосомах <br>
+
+<p>6. Что образуется в результате фотосинтеза?</p>
+<input type="radio" name="q6" value="1"> Глюкоза <br>
+<input type="radio" name="q6" value="0"> Белок <br>
+<input type="radio" name="q6" value="0"> Жир <br>
+
+<p>7. Какое вещество выделяется?</p>
+<input type="radio" name="q7" value="1"> Кислород <br>
+<input type="radio" name="q7" value="0"> Азот <br>
+<input type="radio" name="q7" value="0"> Водород <br>
+
+<p>8. В каких организмах происходит фотосинтез?</p>
+<input type="radio" name="q8" value="1"> Растения <br>
+<input type="radio" name="q8" value="0"> Животные <br>
+<input type="radio" name="q8" value="0"> Грибы <br>
+
+<p>9. Основное значение фотосинтеза:</p>
+<input type="radio" name="q9" value="1"> Образование органических веществ <br>
+<input type="radio" name="q9" value="0"> Дыхание <br>
+<input type="radio" name="q9" value="0"> Деление клеток <br>
+
+<p>10. Формула фотосинтеза:</p>
+<input type="radio" name="q10" value="1"> 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ <br>
+<input type="radio" name="q10" value="0"> O₂ + H₂ → H₂O <br>
+<input type="radio" name="q10" value="0"> Na + Cl → NaCl <br>
+
+<br>
+<input type="button" value="Проверить результат" onclick="checkTest()">
+<input type="reset" value="Очистить">
+</form>
+
+<p id="result"></p>
+
+<script>
+function checkTest() {
+    let score = 0;
+    let total = 10;
+    for (let i = 1; i <= 10; i++) {
+        let answer = document.querySelector('input[name="q' + i + '"]:checked');
+        if (answer && answer.value == "1") {
+            score++;
+        }
+    }
+  document.getElementById("result").innerHTML =
+ "Ваш результат: " + score + " из " + total + " правильных.";
+} </script>
+</head>
+<body bgcolor="#99CC66"></body>
